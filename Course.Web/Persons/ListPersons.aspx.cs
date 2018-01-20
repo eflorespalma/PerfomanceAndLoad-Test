@@ -18,25 +18,25 @@ namespace Course.Web.Persons
         private void BindGrid()
         {
             var personRepository = new PersonData();
-            m_grid.DataSource = personRepository.GetAll();
-            m_grid.DataBind();
+            grvPerson.DataSource = personRepository.GetAll();
+            grvPerson.DataBind();
         }
 
         protected override void OnPreRender(EventArgs e)
         {
-            if (m_grid.Rows == null)
+            if (grvPerson.Rows == null)
             {
                 lblRowCount.Text = "0";
             }
             else
             {
-                lblRowCount.Text = m_grid.Rows.Count.ToString();
+                lblRowCount.Text = grvPerson.Rows.Count.ToString();
             }
 
             base.OnPreRender(e);
         }
 
-        protected void m_grid_RowDataBound(object sender, GridViewRowEventArgs e)
+        protected void grvPerson_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {

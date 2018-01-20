@@ -34,8 +34,8 @@
             <uc1:MenuControl runat="server" ID="MenuControl" />
             &nbsp;<br />
             <h3>Listado de Personas</h3>
-            <asp:GridView ID="m_grid" runat="server" AutoGenerateColumns="False"
-                BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" EmptyDataText="No person records found." OnRowDataBound="m_grid_RowDataBound">
+            <asp:GridView ID="grvPerson" runat="server" AutoGenerateColumns="False"
+                BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" EmptyDataText="No person records found." OnRowDataBound="grvPerson_RowDataBound">
                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="EditPersons.aspx?Id={0}"

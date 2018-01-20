@@ -31,13 +31,13 @@ namespace Course.Web.Persons {
         protected global::Course.Web.Shared.MenuControl MenuControl;
         
         /// <summary>
-        /// m_grid control.
+        /// grvPerson control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView m_grid;
+        protected global::System.Web.UI.WebControls.GridView grvPerson;
         
         /// <summary>
         /// lblRowCount control.
