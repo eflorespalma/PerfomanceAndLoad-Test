@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Mantenimiento de Personas</title>
+    <title>Mantenimiento de Gifts</title>
     <style type="text/css">
         .form-style-2 {
             max-width: 500px;
@@ -142,7 +142,7 @@
                 </label>
                 <label for="field2">
                     <span>Precio</span>
-                    <asp:TextBox ID="txtPrecio" type="number" runat="server" CssClass="input-field"></asp:TextBox>
+                    <asp:TextBox ID="txtPrecio" runat="server" CssClass="input-field"></asp:TextBox>
                 </label>
                 <label>
                     <span>&nbsp;</span>

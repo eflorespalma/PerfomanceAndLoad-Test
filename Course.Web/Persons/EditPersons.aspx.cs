@@ -44,11 +44,8 @@ namespace Course.Web.Persons
         {
             try
             {
-                if (ddlGenero.SelectedValue.Equals(string.Empty))
-                {
-                    AddMessage("Debe seleccionar el Genero de la Persona");
+                if (ValidateForm())
                     return;
-                }
 
                 Person person = new Person();
                 person.EmailAddress = txtEmail.Text;
@@ -71,6 +68,44 @@ namespace Course.Web.Persons
             {
                 AddMessage(ex);
             }
+        }
+
+
+        private bool ValidateForm()
+        {
+            bool result = false;
+
+            if (txtFirstName.Text.Equals(string.Empty))
+            {
+                AddMessage("Debe ingresar el Nombre.");
+                result = true;
+            }
+
+            if (txtLastName.Text.Equals(string.Empty))
+            {
+                AddMessage("Debe ingresar el Apellido.");
+                result = true;
+            }
+
+            if (txtPhone.Text.Equals(string.Empty))
+            {
+                AddMessage("Debe ingresar el Celular.");
+                result = true;
+            }
+
+            if (txtEmail.Text.Equals(string.Empty))
+            {
+                AddMessage("Debe ingresar el Email.");
+                result = true;
+            }
+
+            if (ddlGenero.SelectedValue.Equals(string.Empty))
+            {
+                AddMessage("Debe seleccionar el Genero de la Persona");
+                result = true;
+            }
+
+            return result;
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

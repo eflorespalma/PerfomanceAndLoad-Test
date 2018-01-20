@@ -28,11 +28,9 @@ namespace Course.Web.Gifts
         {
             try
             {
-                if (ddlGenero.SelectedValue.Equals(string.Empty))
-                {
-                    AddMessage("Debe seleccionar el Genero de la Persona");
+                if (ValidateForm())
                     return;
-                }
+
                 Gift person = new Gift();
                 person.Price = double.Parse(txtPrecio.Text);
                 person.Genere = ddlGenero.SelectedValue;
@@ -43,6 +41,25 @@ namespace Course.Web.Gifts
             {
                 AddMessage(ex);
             }
+        }
+
+        private bool ValidateForm()
+        {
+            bool result = false;
+
+            if (ddlGenero.SelectedValue.Equals(string.Empty))
+            {
+                AddMessage("Debe seleccionar el Genero de la Persona");
+                result = true;
+            }
+
+            if (txtPrecio.Text.Equals(string.Empty))
+            {
+                AddMessage("Debe ingresar el Precio del Regalo");
+                result = true;
+            }
+
+            return result;
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

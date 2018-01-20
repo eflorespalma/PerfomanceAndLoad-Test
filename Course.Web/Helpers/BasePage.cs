@@ -16,7 +16,7 @@ namespace Course.Web.Helpers
         }
         public void ReturnToList()
         {
-            Response.Redirect("ListPersons.aspx");
+            Response.Redirect("~/Persons/ListPersons.aspx");
         }
 
     }
