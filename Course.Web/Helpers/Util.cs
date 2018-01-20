@@ -71,6 +71,16 @@ namespace Course.Web.Helpers
                 }
             }
         }
+    }
 
+    public class GenereConstants {
+        public const string FEMENINO = "Femenino";
+        public const string MASCULINO = "Masculino";
+    }
+
+    public class GenereShortConstants
+    {
+        public const string FEMENINO = "F";
+        public const string MASCULINO = "M";
     }
 }

@@ -35,7 +35,7 @@
             &nbsp;<br />
             <h3>Listado de Personas</h3>
             <asp:GridView ID="m_grid" runat="server" AutoGenerateColumns="False"
-                BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" EmptyDataText="No person records found.">
+                BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" EmptyDataText="No person records found." OnRowDataBound="m_grid_RowDataBound">
                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="EditPersons.aspx?Id={0}"
@@ -45,6 +45,7 @@
                     <asp:BoundField DataField="FirstName" HeaderText="Nombres" />
                     <asp:BoundField DataField="PhoneNumber" HeaderText="Celular" />
                     <asp:BoundField DataField="EmailAddress" HeaderText="Email" />
+                    <asp:BoundField DataField="Genere" HeaderText="Genero" />
                 </Columns>
                 <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
                 <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />

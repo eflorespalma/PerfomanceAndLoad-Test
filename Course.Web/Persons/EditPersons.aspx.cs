@@ -22,6 +22,7 @@ namespace Course.Web.Persons
                     txtFirstName.Text = string.Empty;
                     txtLastName.Text = string.Empty;
                     txtPhone.Text = string.Empty;
+                    ddlGenero.SelectedIndex = 0;
                 }
                 else
                 {
@@ -34,6 +35,7 @@ namespace Course.Web.Persons
                     txtFirstName.Text = person.FirstName;
                     txtLastName.Text = person.LastName;
                     txtPhone.Text = person.PhoneNumber;
+                    ddlGenero.SelectedValue = person.Genere;
                 }
             }
         }
@@ -42,11 +44,18 @@ namespace Course.Web.Persons
         {
             try
             {
+                if (ddlGenero.SelectedValue.Equals(string.Empty))
+                {
+                    AddMessage("Debe seleccionar el Genero de la Persona");
+                    return;
+                }
+
                 Person person = new Person();
                 person.EmailAddress = txtEmail.Text;
                 person.FirstName = txtFirstName.Text;
                 person.LastName = txtLastName.Text;
                 person.PhoneNumber = txtPhone.Text;
+                person.Genere = ddlGenero.SelectedValue;
 
 
                 personRepository = new PersonData();

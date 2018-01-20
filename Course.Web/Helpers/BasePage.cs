@@ -12,7 +12,7 @@ namespace Course.Web.Helpers
 
         protected void AddMessage(string message)
         {
-            this.Validators.Add(new ValidatorMessage(message));
+            Validators.Add(new ValidatorMessage(message));
         }
 
     }

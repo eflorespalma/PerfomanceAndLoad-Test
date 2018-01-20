@@ -9,5 +9,6 @@ namespace Course.Entity
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public string PhoneNumber { get; set; }
+        public string Genere { get; set; }
     }
 }

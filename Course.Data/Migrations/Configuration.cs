@@ -10,6 +10,7 @@ namespace Course.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "Course.Data.DatabaseService";
         }
 
         protected override void Seed(Course.Data.DatabaseService context)

@@ -3,7 +3,7 @@ namespace Course.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
@@ -16,6 +16,7 @@ namespace Course.Data.Migrations
                         LastName = c.String(),
                         EmailAddress = c.String(),
                         PhoneNumber = c.String(),
+                        Genere = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             

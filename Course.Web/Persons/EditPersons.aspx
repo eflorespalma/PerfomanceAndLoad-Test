@@ -39,7 +39,26 @@
             width: 48%;
         }
 
+        .form-style-2 select.input-field {
+            width: 48%;
+        }
+
         .form-style-2 input.input-field {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #C2C2C2;
+            box-shadow: 1px 1px 4px #EBEBEB;
+            -moz-box-shadow: 1px 1px 4px #EBEBEB;
+            -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            padding: 7px;
+            outline: none;
+        }
+
+        .form-style-2 select.input-field {
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -77,15 +96,35 @@
                 background: #EA7B00;
                 color: #fff;
             }
+
+        .valFailure {
+            color: #bf1616;
+            background: #FFBABA !important;
+            background-color: #FFBABA;
+            border: 3px solid #bf1616;
+            font-weight: bold;
+            text-align: left;
+            margin: 5px 0;
+            line-height: 1;
+        }
+
+            .valFailure ul {
+                padding-left: 20px;
+            }
+
+                .valFailure ul li {
+                    padding-top: 2px;
+                }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <uc1:MenuControl ID="MainMenuControl1" runat="server" />
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+
 
             <div class="form-style-2">
+                <asp:ValidationSummary ID="ValidationSummary1" CssClass="valFailure" runat="server" />
                 <div class="form-style-2-heading">Mantenimiento de Personas</div>
                 <div>
                     <span style="font-weight: bold;">Id</span>
@@ -108,6 +147,14 @@
                 <label for="field5">
                     <span>Email</span>
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="input-field"></asp:TextBox>
+                </label>
+                <label for="field6">
+                    <span>Genero</span>
+                    <asp:DropDownList ID="ddlGenero" runat="server" CssClass="input-field">
+                        <asp:ListItem Value="">-- Seleccionar --</asp:ListItem>
+                        <asp:ListItem Value="M">Masculino</asp:ListItem>
+                        <asp:ListItem Value="F">Femenino</asp:ListItem>
+                    </asp:DropDownList>
                 </label>
                 <label>
                     <span>&nbsp;</span>

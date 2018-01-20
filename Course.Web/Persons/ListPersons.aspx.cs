@@ -1,9 +1,6 @@
 ﻿using Course.Data.PersonRepository;
-using Course.Entity;
+using Course.Web.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -18,7 +15,6 @@ namespace Course.Web.Persons
                 BindGrid();
             }
         }
-
         private void BindGrid()
         {
             var personRepository = new PersonData();
@@ -38,6 +34,15 @@ namespace Course.Web.Persons
             }
 
             base.OnPreRender(e);
+        }
+
+        protected void m_grid_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                var genere = e.Row.Cells[6].Text;
+                e.Row.Cells[6].Text = genere.Equals(GenereShortConstants.MASCULINO) ? GenereConstants.MASCULINO : GenereConstants.FEMENINO;
+            }
         }
     }
 }
