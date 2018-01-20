@@ -98,11 +98,5 @@ namespace Course.Web.Persons
                 AddMessage(ex);
             }
         }
-
-        private void ReturnToList()
-        {
-            Response.Redirect("ListPersons.aspx");
-        }
-
     }
 }

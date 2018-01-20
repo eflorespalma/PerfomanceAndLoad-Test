@@ -14,6 +14,10 @@ namespace Course.Web.Helpers
         {
             Validators.Add(new ValidatorMessage(message));
         }
+        public void ReturnToList()
+        {
+            Response.Redirect("ListPersons.aspx");
+        }
 
     }
 

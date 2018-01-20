@@ -3,10 +3,20 @@ namespace Course.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Gift",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Genere = c.String(),
+                        Price = c.Double(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.Person",
                 c => new
@@ -25,6 +35,7 @@ namespace Course.Data.Migrations
         public override void Down()
         {
             DropTable("dbo.Person");
+            DropTable("dbo.Gift");
         }
     }
 }

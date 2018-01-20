@@ -6,6 +6,7 @@ namespace Course.Data
     public class DatabaseService : DbContext
     {
         public IDbSet<Person> Person { get; set; }
+        public IDbSet<Gift> Gift { get; set; }
 
         public DatabaseService() : base("cn")
         {
@@ -20,6 +21,7 @@ namespace Course.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Person>().ToTable("Person");
+            modelBuilder.Entity<Gift>().ToTable("Gift");
         }
     }
 }

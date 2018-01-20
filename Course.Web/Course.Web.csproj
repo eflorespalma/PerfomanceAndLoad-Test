@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Calculadora.aspx" />
+    <Content Include="Gifts\RegisterGift.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Persons\EditPersons.aspx" />
     <Content Include="Persons\ListPersons.aspx" />
@@ -95,6 +96,13 @@
     </Compile>
     <Compile Include="Calculadora.aspx.designer.cs">
       <DependentUpon>Calculadora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gifts\RegisterGift.aspx.cs">
+      <DependentUpon>RegisterGift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gifts\RegisterGift.aspx.designer.cs">
+      <DependentUpon>RegisterGift.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
