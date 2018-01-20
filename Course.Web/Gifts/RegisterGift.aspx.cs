@@ -47,7 +47,7 @@ namespace Course.Web.Gifts
         {
             bool result = false;
 
-            if (ddlGenero.SelectedValue.Equals(string.Empty))
+            if (ddlGenero.SelectedValue.Equals("N"))
             {
                 AddMessage("Debe seleccionar el Genero de la Persona");
                 result = true;

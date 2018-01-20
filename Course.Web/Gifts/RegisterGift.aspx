@@ -135,7 +135,7 @@
                 <label for="field1">
                     <span>Genero</span>
                     <asp:DropDownList ID="ddlGenero" runat="server" CssClass="input-field">
-                        <asp:ListItem Value="">-- Seleccionar --</asp:ListItem>
+                        <asp:ListItem Value="N">-- Seleccionar --</asp:ListItem>
                         <asp:ListItem Value="M">Masculino</asp:ListItem>
                         <asp:ListItem Value="F">Femenino</asp:ListItem>
                     </asp:DropDownList>

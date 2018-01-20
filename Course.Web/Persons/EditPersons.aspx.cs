@@ -99,7 +99,7 @@ namespace Course.Web.Persons
                 result = true;
             }
 
-            if (ddlGenero.SelectedValue.Equals(string.Empty))
+            if (ddlGenero.SelectedValue.Equals("N"))
             {
                 AddMessage("Debe seleccionar el Genero de la Persona");
                 result = true;
