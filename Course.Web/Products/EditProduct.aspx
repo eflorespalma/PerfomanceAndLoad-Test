@@ -121,8 +121,6 @@
     <form id="form1" runat="server">
         <div>
             <uc1:MenuControl ID="MainMenuControl1" runat="server" />
-
-
             <div class="form-style-2">
                 <asp:ValidationSummary ID="ValidationSummary1" CssClass="valFailure" runat="server" />
                 <div class="form-style-2-heading">Mantenimiento de Productos</div>
