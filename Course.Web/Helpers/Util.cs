@@ -83,4 +83,22 @@ namespace Course.Web.Helpers
         public const string FEMENINO = "F";
         public const string MASCULINO = "M";
     }
+
+    public class CategoryConstants
+    {
+        public const string PORTATILES = "Portátiles";
+        public const string IMPRESION = "Impresión";
+        public const string ALMACENAMIENTO = "Almacenamiento";
+        public const string SOFTWARE = "Software";
+        public const string TABLETS = "Tables";
+    }
+
+    public class CategoryShortConstants
+    {
+        public const string PORTATILES = "P";
+        public const string IMPRESION = "I";
+        public const string ALMACENAMIENTO = "A";
+        public const string SOFTWARE = "S";
+        public const string TABLETS = "T";
+    }
 }

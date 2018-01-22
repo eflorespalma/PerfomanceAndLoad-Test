@@ -19,6 +19,11 @@ namespace Course.Web.Helpers
             Response.Redirect("~/Persons/ListPersons.aspx");
         }
 
+        public void ReturnToListProduct()
+        {
+            Response.Redirect("~/Products/ListProduct.aspx");
+        }
+
     }
 
     public class ValidatorMessage : System.Web.UI.IValidator

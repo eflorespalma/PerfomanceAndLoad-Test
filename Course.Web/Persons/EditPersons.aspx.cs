@@ -39,7 +39,6 @@ namespace Course.Web.Persons
                 }
             }
         }
-
         protected void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -69,8 +68,6 @@ namespace Course.Web.Persons
                 AddMessage(ex);
             }
         }
-
-
         private bool ValidateForm()
         {
             bool result = false;
@@ -107,12 +104,10 @@ namespace Course.Web.Persons
 
             return result;
         }
-
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             ReturnToList();
         }
-
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             try

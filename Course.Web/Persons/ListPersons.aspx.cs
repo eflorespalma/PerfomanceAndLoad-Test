@@ -21,7 +21,6 @@ namespace Course.Web.Persons
             grvPerson.DataSource = personRepository.GetAll();
             grvPerson.DataBind();
         }
-
         protected override void OnPreRender(EventArgs e)
         {
             if (grvPerson.Rows == null)
@@ -35,7 +34,6 @@ namespace Course.Web.Persons
 
             base.OnPreRender(e);
         }
-
         protected void grvPerson_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
